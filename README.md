@@ -21,7 +21,7 @@ Both must be copied to the vfat partition.
 The data folder must be copied to the ext2 partition.
 
 ### 4. Place sd-card in device
-Boot the device without sd-card, wait until the blue led stops flashing. The device will automatically run ```snx_autorun.sh``` when the sd-card is inserted. Do not boot the device with the card inserted and then re-insert it, to prevent it from being mounted incorrectly (mmcblk1 instead of mmcblk0).
+Boot the device without sd-card, wait until the blue led stops flashing. The device will automatically run ```snx_autorun.sh``` when the sd-card is inserted. Do not boot the device with the card inserted and then eject and re-insert it, as it will be mounted incorrectly (mmcblk1 instead of mmcblk0). After install, Fanghack runs off the sdcard so there's no need to take the sdcard out during reboot anymore.
 
 ### 5. Enable hacks
 When you visit ```http://device-ip/cgi-bin/status``` you should now be presented with a status page. If you get a '404 Not Found' page, the ```snx_autorun.sh``` script didn't run. You can visit ``http://device-ip/cgi-bin/hello.cgi`` to check if the sd-card is mounted correctly. 
